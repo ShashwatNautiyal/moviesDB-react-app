@@ -1,0 +1,31 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+.nav {
+	width: 100%;
+	display: flex;
+	position: fixed;
+	justify-content: space-between;
+	padding: 10px 20px;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	transition: all 0.3s ease-in;
+}
+
+.nav__black {
+	background: rgba(20, 20, 20, 1);
+}
+
+.nav__logo {
+	width: 90px;
+	object-fit: contain;
+}
+
+.nav__avatar {
+	width: 40px;
+	object-fit: contain;
+}

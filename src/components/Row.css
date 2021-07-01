@@ -1,0 +1,173 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.row__heading {
+	padding: 10px;
+	padding-bottom: 0;
+}
+
+.disableScroll {
+	overflow: hidden;
+	max-height: 100vh;
+}
+
+.row__posters {
+	display: flex;
+	padding: 10px;
+	overflow-y: hidden;
+	overflow-x: scroll;
+}
+
+.row__largeImg,
+.row__smallImg {
+	width: 100%;
+	object-fit: contain;
+	margin-right: 7px;
+	height: 200px;
+	transition: transform 0.3s;
+	cursor: pointer;
+}
+
+.row__smallImg {
+	height: 150px;
+	margin-right: 10px;
+}
+
+.row__smallImg:hover {
+	transform: scale(1.05);
+}
+
+.row__largeImg:hover {
+	transform: scale(1.08);
+}
+
+/* width */
+.row__posters::-webkit-scrollbar {
+	display: none;
+}
+/* Movie Overview */
+
+.row__movieOverview {
+	width: 100%;
+	opacity: 1 !important;
+	overflow-y: auto !important;
+	left: 50%;
+	transform: translateX(-50%);
+	position: fixed;
+	overflow-y: auto;
+	bottom: 0;
+	height: 100vh !important;
+	padding: 1rem 2rem;
+	z-index: 3;
+	background-color: rgba(37, 37, 37, 0.8);
+	backdrop-filter: blur(20px);
+}
+
+.row__movieOverview img {
+	width: 150px;
+	padding: 10px 0;
+}
+
+.row__movieOverview p {
+	font-size: 17px;
+	margin-bottom: 5px;
+	font-weight: 300;
+}
+
+.row__clearIcon {
+	position: absolute;
+	right: 2rem;
+	top: 2rem;
+	cursor: pointer;
+}
+
+.row__clearIcon svg path {
+	pointer-events: none;
+}
+
+.row__clearIcon:hover {
+	color: rgb(251, 0, 0);
+}
+
+.overview--fadeOut {
+	height: 0;
+	opacity: 0;
+	transition: opacity 0.2s ease-in-out;
+}
+
+.overview__poster {
+	display: flex;
+}
+
+.overview__poster div {
+	padding: 1rem;
+}
+
+a {
+	text-decoration: none;
+	font-weight: 600;
+	color: #c53347;
+}
+
+a:hover {
+	color: #ff2945;
+}
+
+.youtube {
+	margin-top: 1rem;
+	display: flex;
+	justify-content: space-between;
+}
+
+.youtube > p {
+	width: 50vw;
+	margin-right: 10px;
+}
+
+.youtube__video {
+	height: 40vh;
+	width: 40vw;
+}
+
+@media (max-width: 878px) {
+	.row__movieOverview {
+		width: 100%;
+		height: 100vh !important;
+		backdrop-filter: blur(20px);
+		background-color: rgba(37, 37, 37, 0.6);
+	}
+
+	.row__movieOverview p {
+		font-size: 14px;
+	}
+
+	.row__movieOverview h1 {
+		font-size: 1.5rem;
+	}
+
+	.row__movieOverview img {
+		width: 120px;
+		object-fit: contain;
+	}
+
+	.youtube {
+		margin-top: 0;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.youtube > p {
+		width: 97%;
+		margin-right: 0;
+		margin-bottom: 10px;
+	}
+
+	.youtube__video {
+		display: flex;
+		height: 35vh;
+		width: 97%;
+	}
+}
