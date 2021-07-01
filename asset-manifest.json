@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/weather-react-app/static/css/main.3eb0bba7.chunk.css",
-    "main.js": "/weather-react-app/static/js/main.4d0d39d6.chunk.js",
-    "main.js.map": "/weather-react-app/static/js/main.4d0d39d6.chunk.js.map",
-    "runtime-main.js": "/weather-react-app/static/js/runtime-main.21ebe529.js",
-    "runtime-main.js.map": "/weather-react-app/static/js/runtime-main.21ebe529.js.map",
-    "static/js/2.6032f8a8.chunk.js": "/weather-react-app/static/js/2.6032f8a8.chunk.js",
-    "static/js/2.6032f8a8.chunk.js.map": "/weather-react-app/static/js/2.6032f8a8.chunk.js.map",
-    "index.html": "/weather-react-app/index.html",
-    "static/css/main.3eb0bba7.chunk.css.map": "/weather-react-app/static/css/main.3eb0bba7.chunk.css.map",
-    "static/js/2.6032f8a8.chunk.js.LICENSE.txt": "/weather-react-app/static/js/2.6032f8a8.chunk.js.LICENSE.txt"
+    "main.css": "/moviesDB-react-app/static/css/main.3eb0bba7.chunk.css",
+    "main.js": "/moviesDB-react-app/static/js/main.4d0d39d6.chunk.js",
+    "main.js.map": "/moviesDB-react-app/static/js/main.4d0d39d6.chunk.js.map",
+    "runtime-main.js": "/moviesDB-react-app/static/js/runtime-main.13fc4786.js",
+    "runtime-main.js.map": "/moviesDB-react-app/static/js/runtime-main.13fc4786.js.map",
+    "static/js/2.b3139a1b.chunk.js": "/moviesDB-react-app/static/js/2.b3139a1b.chunk.js",
+    "static/js/2.b3139a1b.chunk.js.map": "/moviesDB-react-app/static/js/2.b3139a1b.chunk.js.map",
+    "index.html": "/moviesDB-react-app/index.html",
+    "static/css/main.3eb0bba7.chunk.css.map": "/moviesDB-react-app/static/css/main.3eb0bba7.chunk.css.map",
+    "static/js/2.b3139a1b.chunk.js.LICENSE.txt": "/moviesDB-react-app/static/js/2.b3139a1b.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.21ebe529.js",
-    "static/js/2.6032f8a8.chunk.js",
+    "static/js/runtime-main.13fc4786.js",
+    "static/js/2.b3139a1b.chunk.js",
     "static/css/main.3eb0bba7.chunk.css",
     "static/js/main.4d0d39d6.chunk.js"
   ]
