@@ -9,12 +9,12 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
 	const [movieOverview, setMovieOverview] = useState(false);
 	const [movieDesc, setMovieDesc] = useState();
 	const [youtubeId, setYoutubeId] = useState([]);
+	const [availableOn, setAvailableOn] = useState([]);
 
 	const baseUrl = 'https://api.themoviedb.org/3';
 	const baseImgUrl = 'https://image.tmdb.org/t/p/original';
 
-	console.log(movieDesc);
-	console.log(youtubeId);
+	console.log(availableOn);
 
 	useEffect(() => {
 		fetch(`${baseUrl}${fetchUrl}`)
@@ -25,6 +25,7 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
 	const showMovieOverview = (movie, e) => {
 		let url = requests.fetchMovieDetails.replace('ID', movie.id);
 		let trailerUrl = requests.fetchMovieId.replace('ID', movie.id);
+		let nowPlayingUrl = requests.fetchNowPlaying.replace('ID', movie.id);
 		console.log(`${baseUrl}${url}`, movie.id);
 		fetch(`${baseUrl}${url}`)
 			.then((Response) => Response.json())
@@ -32,6 +33,9 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
 		fetch(`${baseUrl}${trailerUrl}`)
 			.then((Response) => Response.json())
 			.then((data) => setYoutubeId(data.results));
+		fetch(`${baseUrl}${nowPlayingUrl}`)
+			.then((Response) => Response.json())
+			.then((data) => setAvailableOn(data.results));
 		e.target.parentElement.parentElement.parentElement.classList.add('disableScroll');
 		setMovieOverview(true);
 	};
@@ -123,10 +127,33 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
 							</div>
 						</div>
 						<div className="youtube">
-							<p>
-								<strong>Description</strong>: {movieDesc?.overview}
-							</p>
+							<div className="buyOn">
+								<p>
+									<strong>Description</strong>: {movieDesc?.overview}
+								</p>
 
+								<p>
+									<strong>Available on:</strong>{' '}
+									{(availableOn?.US?.buy &&
+										availableOn?.US?.buy?.map((on, index) =>
+											availableOn?.US?.buy.length - 1 !== index
+												? `${on.provider_name}, `
+												: `${on.provider_name}.`
+										)) ||
+										(availableOn?.US?.rent &&
+											availableOn?.US?.rent?.map((on, index) =>
+												availableOn?.US?.rent.length - 1 !== index
+													? `${on.provider_name}, `
+													: `${on.provider_name}.`
+											)) ||
+										(availableOn?.US?.flatrate &&
+											availableOn?.US?.flatrate?.map((on, index) =>
+												availableOn?.US?.flatrate.length - 1 !== index
+													? `${on.provider_name}, `
+													: `${on.provider_name}.`
+											))}
+								</p>
+							</div>
 							<div>
 								<p>
 									<strong>Trailer:</strong>

@@ -11,6 +11,7 @@ const requests = {
 	fetchDocumentaries: `/discover/movie?api_key=${API_KEY}&with_genres=99`,
 	fetchMovieDetails: `/movie/ID?api_key=${API_KEY}&language=en-US`,
 	fetchMovieId: `/movie/ID/videos?api_key=${API_KEY}&language=en-US`,
+	fetchNowPlaying: `/movie/ID/watch/providers?api_key=${API_KEY}`,
 };
 
 export default requests;
