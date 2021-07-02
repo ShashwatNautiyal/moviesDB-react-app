@@ -77,8 +77,8 @@
 }
 
 .buyOn {
-	margin-top: 10px;
-	margin-right: 8px;
+	margin-top: 0;
+	margin-right: 1rem;
 }
 
 .row__clearIcon {
@@ -121,7 +121,7 @@ a:hover {
 }
 
 .youtube {
-	margin-top: 1rem;
+	margin-top: 0;
 	display: flex;
 	justify-content: space-between;
 }
