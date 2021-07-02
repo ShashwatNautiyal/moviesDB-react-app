@@ -67,7 +67,7 @@
 
 .row__movieOverview img {
 	width: 150px;
-	padding: 0;
+	padding: 10px 0;
 }
 
 .row__movieOverview p {
