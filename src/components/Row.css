@@ -148,9 +148,12 @@ a:hover {
 	.row__movieOverview p {
 		font-size: 14px;
 	}
+	.overview__poster {
+		margin-top: 5px;
+	}
 
 	.overview__poster div {
-		padding: 7px;
+		padding: 0 7px;
 	}
 
 	.buyOn {
